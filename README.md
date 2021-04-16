@@ -1,4 +1,4 @@
-This project goes with another project of mine : KineticCreator.
+This project goes with another project of mine : KinetikCreator => https://github.com/Toshibane/KinetikCreator.
 
 It's a Visual Novel Reader, using JSON files as a base, and fully written in Python with Pygame as a sole dependency.
 
