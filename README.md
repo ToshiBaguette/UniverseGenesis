@@ -2,7 +2,7 @@ This project goes with another project of mine : KineticCreator.
 
 It's a Visual Novel Reader, using JSON files as a base, and fully written in Python with Pygame as a sole dependency.
 
-**HOW IT WORKS**
+## HOW IT WORKS
 
 First, there's a main menu, allowing to choose what to do : start a new game, load a save file, change configurations, and leave the game.
 
@@ -12,7 +12,7 @@ In the pause menu, you can save your current progress, load another save file, e
 
 Finally, in the configuration menu, you can change the volume of the background music, or toggle fullscreen.
 
-**CODE BASICS**
+## CODE BASICS
 
 Every menu in the game has its own class, with some basic functions as render make it visible, and start to open the menu.
 
