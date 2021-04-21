@@ -3,6 +3,7 @@ import os
 import MainMenu
 import utils
 from ReadScene import ReadScene
+from ReadChoice import ReadChoice
 
 
 def init():
@@ -29,7 +30,7 @@ def init():
 
 def start(screen):
     """Fonction s'occupant rapidement de la boucle de jeu"""
-    state = ["main_menu",]
+    state = ["read_scene", 'super_choice', '']
     in_game = True
     while in_game:
         if state[0] == "quit":
@@ -38,7 +39,12 @@ def start(screen):
             menu = MainMenu.MainMenu(screen)
             state = menu.start()
         elif state[0] == "read_scene":
-            menu = ReadScene(screen, state[1], state[2])
+            json_scene = utils.load_scene(state[1])
+            menu = None
+            if json_scene["type"] == "choice":
+                menu = ReadChoice(screen, state[1], state[2])
+            else:
+                menu = ReadScene(screen, state[1], state[2])
             state = menu.start()
 
 

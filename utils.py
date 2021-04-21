@@ -143,3 +143,12 @@ def save(nb, scene, image):
     pygame.image.save(image, "saves/save" + str(nb) + ".jpg")
 
     return None
+
+
+# PARTIE SCENES
+def load_scene(file_path):
+    file_scene = io.open("scenes/scene_" + file_path + ".json", 'r', encoding='utf-8')
+    json_scene = json.load(file_scene)
+    file_scene.close()
+    return json_scene
+
